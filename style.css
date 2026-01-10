@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0; /*ESPAÇAMENTO EXTERNO*/
+    padding: 0; /*ESPAÇAMENTO INTERNO*/
+    box-sizing: border-box; /*muda a forma que calcula a distancia dos itens*/
+} /*O aterisco significa tudo, ele vai aplicar esse estilo para tudo*/
+
+html{
+    scroll-snap-type: y mandatory;/*scrollar por inteiro a pagina*/
+}
+video, .img-tesla {
+    width: 100%; /*LARGURA*/
+    height: 100%; /*ALTURA*/
+    position:absolute; /*POSICIONAR O ITEM NUMA POSIÇÃO EXATA QUE EU DESEJAR*/
+    top: 0;
+    left: 0;
+    z-index: -1; /*define quem vai ficar por cima de quem*/
+    object-fit: cover;/*como eu quero que meu video se encaixe na tela, cover é cobrir a tela toda*/
+}
+
+.logo {
+    filter: brightness(100);
+    position: fixed; /*agora ele é fixo e pode se sobrepor pelas fotos e videos e nao mudar de local(fica flutuando)*/
+    width: 120px;
+}
+
+.item{
+    display: flex; /*ajuda a organizar os itens, deixando-os lado a lado, e habilita algumas configuracoes do css, que sao essas abaixo*/
+    justify-content: space-between; /*cria um espaçamento entre os itens*/
+    flex-direction: column; /*direção da organização*/
+    position:relative;
+    height: 100vh;/*tela toda - altura*/
+    width: 99.1vw;
+    scroll-snap-align: start;/*aceita o estilo de scrollar por inteiro a pagina que esta la em cima*/
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+}
+
+.sub-titulo{
+    color: white;
+}
+
+.info-carro{
+    margin-top: 80px;/*dar um espaçamento em cima*/
+    text-align: center;/*alinhar texto no centro*/
+}
+
+.rodape{
+    text-align: center;
+}
+
+button{
+    background-color: rgba(34,34,34, 0.8);
+    color: white;
+    padding: 7px 80px;
+    border-radius: 5px;/*arredondar borda*/
+    border: none;/*tira a borda do botão*/
+    opacity: 0.8;/*transparencia*/
+    cursor: pointer;/*coloca a maozinha no lugar do mouse*/
+}
+
+.test-drive{
+    color: black;
+    background-color: white;
+}
+
+.texto-rodape{
+    color: white;
+    font-size: 12px;/*tamanho do texto*/
+    margin-top: 10px;/*margem em cima*/
+}
+
+.model-x{
+    color: black;
+}
+
+.formulario{
+    position: fixed;
+    top:40px;
+    width: 600px;
+    height: 100%;
+    z-index: 3;
+    left: -50%;
+    transition: 1.5s;/*transição de se mexer*/
+}
